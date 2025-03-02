@@ -27,7 +27,7 @@ const MobileTree = () => {
   const { userId } = useParams();
 
   const tree = true
-  let pfp = `http://localhost:5000${image}`
+  let pfp = `https://finalevaluation3.onrender.com${image}`
 
   useEffect(() => {
     fetchTree(userId);

@@ -49,7 +49,7 @@ const Preview = () => {
           <button className={styles.share} onClick={handleShare}>
             <img src="/links/share.svg"className={styles.shareimg} />
           </button>
-          <img src={`http://localhost:5000${user.image}`} className={styles.pfpimg} />
+          <img src={`https://finalevaluation3.onrender.com${user.image}`} className={styles.pfpimg} />
           <p className={styles.username} style={{ color: font.textColor }}>@{username}</p>
         </div>
 

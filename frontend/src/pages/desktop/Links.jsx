@@ -67,7 +67,7 @@ const Links = () => {
     setValue("username", user?.username || "there");
     setValue("bio", user?.bio || "");
     if (user?.image) {
-      setPreviewImage(`http://localhost:5000${user.image}`);
+      setPreviewImage(`https://finalevaluation3.onrender.com${user.image}`);
     } else {
       setPreviewImage("/uploads/pfp.svg"); // Default profile image
     }
