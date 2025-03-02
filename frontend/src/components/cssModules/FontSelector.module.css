@@ -1,0 +1,30 @@
+.fontSelector {
+  width: 95%;
+  background-color: white;
+  height: 50px;
+  border: 1px solid #E0E2D9;
+  border-radius: 8px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.fontPrev {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  background-color: #F3F3F1;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.fontSelect {
+  flex: 1;
+  font-size: 16px;
+}

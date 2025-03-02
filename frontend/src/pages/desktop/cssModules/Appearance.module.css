@@ -1,0 +1,971 @@
+.body {
+  display: flex;
+  font-family: "Poppins", serif;
+ 
+  padding: 2% 5%;
+  
+  gap: 15%;
+
+}
+
+.preview {
+  height: 100vh;
+}
+
+
+
+
+.customise {
+  width: 640px;
+
+  justify-content: flex-start;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  padding-bottom: 80px;
+
+}
+
+
+
+/* Profile Form */
+
+.cLayout {
+  width: 100%;
+  font-family: "Inter", serif;
+  margin-bottom: 30px;
+
+  
+
+}
+
+
+
+.cLayout h1, h2, h3, h4{
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+ 
+}
+.layoutForm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 291px;
+  width: 100%;
+ background-color: white;
+ border-radius: 15px;
+ gap: 15px;
+
+}
+
+.stack, .grid, .carousel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+}
+
+.layoutButton , .selectedLayout{
+  width: 142px;
+  height: 128px;
+  border-radius: 8px;
+  border: 1px solid black;
+  background-color: transparent;
+}
+
+.selectedLayout {
+  background-color: #F6F7F5 !important;
+  border: none !important;
+}
+
+.pad {
+  width: 100%;
+  background-color: white;
+  border-radius: 24px;
+  display: flex;
+  
+  justify-content: center;
+}
+
+.buttonForm{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ padding: 30px;
+ 
+  width: 90%;
+ background-color: white;
+ border-radius: 24px;
+
+ gap: 15px;
+
+}
+
+.cFill, .cOutline, .cHardShadow, .cSoftShadow, .cSpecial{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 20px;
+
+} 
+
+.cFill p, .cOutline p, .cHardShadow p, .cSoftShadow p, .cSpecial p{
+  font-size: 14px;
+  color: #212529;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.fill, .outline, .hardShadow, .softShadow, .special {
+  display: flex;
+  justify-content: space-between;
+}
+
+.special {
+  flex-wrap: wrap;
+}
+
+.fill1, .fill2, .fill3 {
+ width: 181px;
+ height: 36px;
+ background-color: black; 
+ 
+}
+
+.fill2 {
+  border-radius: 8px;
+}
+
+.fill3 {
+  border-radius: 24px;
+}
+
+.selectedFill {
+  width: 178px;
+  height: 33px;
+  border: 5px solid transparent;
+  outline: 2px solid #d3d3d3; 
+   outline-offset: 4px; 
+   transition: all 0.5s ease;
+ 
+}
+
+
+
+.outline1, .outline2, .outline3 {
+  width: 181px;
+  height: 36px;
+ border: 1px black solid;
+ background-color: transparent;
+ }
+
+ .outline2 {
+  border-radius: 8px;
+}
+
+.outline3 {
+  border-radius: 24px;
+}
+
+
+.hardShadow1, .hardShadow2, .hardShadow3 {
+  width: 181px;
+  height: 36px;
+  background-color: transparent; 
+  border: 1px black solid;
+  box-shadow: 4px 4px 0px black;
+  
+ }
+
+
+ .hardShadow2 {
+  border-radius: 8px;
+}
+
+.hardShadow3 {
+  border-radius: 24px;
+}
+
+
+.softShadow1, .softShadow2, .softShadow3 {
+  width: 181px;
+  height: 36px;
+ background-color: transparent;
+ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
+ }
+
+ .softShadow2 {
+  border-radius: 8px;
+}
+
+.softShadow3 {
+  border-radius: 24px;
+}
+
+
+ .special3, .special4, .special5, .special6  {
+  width: 181px;
+  height: 36px;
+  background-color: black; 
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+ }
+
+ .special1, .special2 {
+  position: relative;
+  width: 181px;
+  height: 30px;
+  background-color: black; 
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  
+ }
+
+ .special1::before,
+.special1::after {
+  content: "";
+  position: absolute;
+  
+  left: 0;
+  width: 100%;
+  height: 10px; /* Adjust height based on torn.svg */
+  background: url('/appearance/tornpage.svg') repeat-x;
+  background-size: cover;
+}
+
+.special1::before {
+  top: -8px; /* Moves it slightly above the button */
+}
+
+/* Bottom torn effect (Rotated) */
+.special1::after {
+  bottom: -8px; /* Moves it slightly below the button */
+  transform: rotate(180deg);
+}
+
+.special2::before,
+.special2::after {
+  content: "";
+  position: absolute;
+  
+  left: 0;
+  width: 100%;
+  height: 10px; /* Adjust height based on torn.svg */
+  background: url('/appearance/wave.svg') repeat-x;
+  background-size: cover;
+}
+
+.special2::before {
+  top: -8px; /* Moves it slightly above the button */
+}
+
+/* Bottom torn effect (Rotated) */
+.special2::after {
+  bottom: -8px; /* Moves it slightly below the button */
+  transform: rotate(180deg);
+}
+
+
+
+ .special3 {
+  background-color: white;
+  border: 2px solid black;
+  position: relative;
+}
+
+.special3::after {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  border: 2px solid black;
+}
+
+.special4 {
+  border-radius: 50px
+}
+
+
+.special5 {
+  background-color: white;
+  border: 2px solid black;
+  position: relative;
+}
+
+.special5::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: -5px;
+  bottom: -5px;
+  border: 2px solid black;
+}
+
+.special6 {
+  background-color: black;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+
+
+.fontsForm {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 24px;
+  padding: 20px;
+}
+
+
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ .buttonColor {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.colorLabel {
+  font-family: "Poppins", serif;
+  font-size: 14px;
+  color: #212529;
+  font-weight: 600;
+}
+
+.color {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+
+
+
+ 
+
+
+ 
+
+
+
+
+
+
+.cAddLinks {
+  background-color: white;
+  margin-bottom: 40px;
+  border-radius: 15px;
+}
+
+.addLinks {
+  padding: 20px;
+}
+
+
+
+
+.addButton {
+  width: 100%;
+  background-color: #28A263;
+  color: white;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 64px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.addButton:hover {
+  opacity: 0.8;
+}
+
+
+
+
+/* Save Button */
+.saveButton {
+  
+  background-color: #28A263;
+  color: white;
+  width: 190px;
+  height: 50px;
+  padding: 0.75rem;
+  position: fixed;
+  bottom: 3%;
+  right: 4%;
+  border: none;
+  border-radius: 15px;
+  
+  font-size: 18px
+  
+}
+
+.saveButton:hover {
+  opacity: 0.8;
+}
+
+
+
+.picker {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+
+.colorPicker {
+  width: 48px;
+  height: 48px;
+  outline: none;
+  border: none;
+  border-radius: 15px;
+}
+
+
+.text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 231px;
+  height: 52px;
+  background-color: #F6F7F5;
+  outline: none;
+  border: none;
+  border-radius: 9px;
+  padding: 0 15px;
+}
+
+.colorText {
+  background-color: transparent;
+  outline: none;
+  border: none;
+}
+
+.text label {
+  font-family: "Poppins", serif;
+  font-size: 14px;
+  color: #676B5F;
+}
+
+
+.fontSelector {
+  width: 95%;
+  background-color: white;
+  height: 50px;
+  border: 1px solid #E0E2D9;
+  border-radius: 8px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  margin-bottom: 20px;
+  
+}
+
+.fontPrev {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  background-color: #F3F3F1;
+}
+
+.cFonts p {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.cTheme {
+
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+  background-color: white;
+  border-radius: 24px;
+  padding: 20px;
+  width: 94%;
+  height: 533px;
+}
+
+.cThemes {
+  height: auto;
+
+}
+
+.cThemes h4 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.theme1 {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+background-color: transparent;
+
+gap: 5px;
+
+}
+
+
+
+.themeTop {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.themeBottom {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  justify-content: flex-start;
+}
+
+.themeButton {
+  border-radius: 10px;
+  border: 1px solid #E0E2D9;
+  background-color: transparent;
+}
+
+.themeButton img{
+ 
+  border-radius: 10px;
+  background-color: transparent;
+}
+
+.themeSelect {
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: transparent;
+}
+
+.themeSelect img{
+ 
+  border-radius: 10px;
+  background-color: transparent;
+}
+
+
+.disableSave  {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #c3c3c3;
+  gap: 5px;
+}
+
+.previewButton {
+  display: none;
+}
+
+.close {
+  display: none;
+ 
+}
+
+
+
+
+@media screen and (max-width: 650px) {   
+  .preview {
+    display: none;
+  }
+
+  .body {
+    display: flex;
+    align-items: center;
+   
+    font-family: "Poppins", serif;
+    padding: 0;
+    
+    gap: 15%;
+  
+  }
+  
+  
+  
+
+  .customise {
+    width: 100vw;
+   padding-left: 20px;
+   padding-top: 20px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    padding-bottom: 10%;
+   
+  
+  }
+.cLayout h1, h2, h3, h4{
+  font-size: 14px;
+
+ 
+}
+.layoutForm {
+
+  height: auto;
+  padding: 20px 0;
+border-radius: 15px;
+
+
+
+ 
+}
+
+.layoutForm img {
+  width: 31px;
+  height: 26px;
+} 
+
+.layoutForm label {
+  font-size: 10px;
+}
+
+
+.layoutButton , .selectedLayout{
+  width: 79px;
+  height: 71px;
+ 
+ 
+}
+
+.pad {
+  width: 100%;
+  background-color: white;
+  border-radius: 24px;
+  display: flex;
+  padding: 0;
+
+  justify-content: center;
+}
+
+.buttonForm{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+
+  width: 90%;
+ background-color: white;
+ border-radius: 24px;
+
+ gap: 15px;
+
+}
+
+.cFill, .cOutline, .cHardShadow, .cSoftShadow, .cSpecial{
+
+  margin-bottom: 10px;
+
+} 
+
+.cFill p, .cOutline p, .cHardShadow p, .cSoftShadow p, .cSpecial p{
+  font-size: 10px;
+
+}
+
+
+.special {
+  flex-wrap: wrap;
+}
+
+.fill1, .fill2, .fill3 {
+ width: 30%;
+ height: 23px;
+
+ 
+}
+
+
+.selectedFill {
+  width: 30%;
+  height: 20px;
+
+ 
+}
+
+
+
+.outline1, .outline2, .outline3 {
+  width: 30%;
+  height: 23px;
+
+ }
+
+
+.hardShadow1, .hardShadow2, .hardShadow3 {
+  width: 30%;
+  height: 23px;
+
+  
+ }
+
+
+
+
+.softShadow1, .softShadow2, .softShadow3 {
+  width: 30%;
+  height: 23px;
+ }
+
+
+
+
+.special1, .special2, .special3, .special4, .special5, .special6  {
+  width: 30%;
+  height: 23px;
+ }
+
+
+
+.colorPicker {
+  width: 30px;
+  height: 30px;
+
+
+}
+
+.colorLabel {
+  margin-bottom: 5px;
+  font-size: 12px;
+}
+
+
+.text {
+
+  width: 60%;
+  height: 32px;
+ 
+}
+
+
+.text label {
+
+  font-size: 10px;
+}
+
+.text input {
+  font-size: 12px;
+}
+
+
+.fontSelector {
+  width: 95%;
+ 
+  height: 30px;
+ 
+  
+}
+
+.fontPrev {
+
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  background-color: #F3F3F1;
+}
+
+.cFonts p {
+  font-size: 10px;
+
+}
+
+.cTheme {
+
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+  background-color: white;
+  border-radius: 24px;
+  padding: 15px;
+  width: 94%;
+  height: auto
+}
+
+.cThemes {
+  height: auto;
+  margin-bottom: 20px;
+
+}
+
+.cThemes h4 {
+  font-size: 14px;
+ 
+}
+
+.theme1 label {
+  font-size: 10px;
+}
+
+
+
+
+
+.themeTop {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.themeBottom {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  justify-content: flex-start;
+}
+
+.themeButton {
+  border-radius: 10px;
+  border: 1px solid #E0E2D9;
+  background-color: transparent;
+}
+
+.themeButton img{
+ width: 71px;
+ height: 111px;
+  border-radius: 10px;
+  background-color: transparent;
+}
+
+.themeSelect {
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: transparent;
+}
+
+.themeSelect img{
+ 
+  border-radius: 10px;
+  background-color: transparent;
+}
+
+
+.disableSave  {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #c3c3c3;
+  gap: 5px;
+}
+
+.saveButton {
+  
+  position: static;
+  width: 140px;
+  padding: 0.50rem;
+  height: 35px;
+  font-size: 12px;
+  
+  
+}
+
+.cSave {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.previewButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  gap: 5px;
+  width: 88px;
+  height: 26px;
+  border-radius: 13px;
+  background-color: white;
+  color: #404040;
+  z-index: 20;
+  bottom: 18%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 11.75px;
+}
+
+.previewButton img{ 
+width: 16px;
+height: 13px;
+}
+
+.show {
+  display: block; /* Show the element */
+}
+
+.hide {
+  display: none; /* Hide the element */
+}
+
+.close {
+  display: flex;
+  width: 24px;
+  height: 24px;
+  font-size: 18px;
+  font-weight: 300;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  
+  z-index: 20;
+    bottom: 26%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+
+
+
+
+
+
+
+
+}
+

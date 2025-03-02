@@ -1,0 +1,45 @@
+.body {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  
+}
+
+
+.container {
+
+  display: flex;
+  flex-direction: column;
+   width: 100%;
+   overflow-y: auto;
+   scrollbar-width: thin;
+   padding-bottom: 15%;
+   
+   
+ }
+
+ .dummy {
+ 
+  
+  display: flex;
+  min-height: 10vh;
+  background-color: white;
+  height: 10vh;
+  width: 100%;
+ }
+
+
+ 
+ .header {
+  height: 10%;
+  width: 100%;
+
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 3;
+  background-color: white;
+ }

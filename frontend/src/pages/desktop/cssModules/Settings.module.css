@@ -1,0 +1,222 @@
+.body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3% 3%;
+  font-family: "Poppins", serif;
+ 
+
+}
+
+.contSettings {
+  position: relative;
+  background-color: white;
+  width: 1110px;
+  height: 640px;
+  border-radius: 25px;
+  padding: 30px;
+}
+
+.title {
+
+  width: 100%;
+  border-bottom: 1px solid #737373;
+  margin-bottom: 40px;
+}
+
+.title h1 {
+  font-size: 16px;
+  width: 100px;
+  font-weight: 400;
+  padding-left: 10px;
+  color: #29A263;
+  border-bottom: 3px solid #29A263;
+  border-radius: 3px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 500px;
+  padding-left: 30px;
+}
+
+.cInput {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.cInput label {
+  font-size: 17px;
+  margin-bottom: 3px;
+  color: #5E5E5E;
+  font-weight: 400;
+}
+
+.input {
+  padding: 10px;
+  padding-left: 15px;
+
+  height: 30px;
+  background-color: transparent;
+  border: 1px solid #3E3E3E;
+  border-radius: 11px;
+  font-size: 16px;
+}
+
+.input:focus {
+  border-color: #4caf50;
+  outline: none;
+ 
+ 
+}
+
+.errorBorder {
+  border-color: #EE1D52 !important;
+}
+
+.error {
+  font-size: 12px;
+  color: #EE1D52;
+  margin-top: 3px;
+}
+
+
+.saveButton {
+  
+  background-color: #28A263;
+  color: white;
+  width: 190px;
+  height: 50px;
+  padding: 0.75rem;
+  position: absolute;
+  bottom: 3%;
+  right: 4%;
+  border: none;
+  border-radius: 15px;
+  
+  font-size: 18px
+  
+}
+
+.saveButton:hover {
+  opacity: 0.8;
+}
+
+
+@media screen and (max-width: 650px) {  
+
+
+  .body {
+    background-color: white;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+
+ 
+   
+  
+  }
+  
+  .contSettings {
+    position: relative;
+    background-color: white;
+    width: 90%;
+    
+    border-radius: 0px;
+    padding-top: 2%;
+ 
+  }
+  
+  .title {
+    display: none;
+   
+  }
+
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    padding: 0;
+ 
+  }
+  
+  .cInput {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 100%;
+
+  }
+  
+  .cInput label {
+    font-size: 12px;
+    margin-bottom: 3px;
+    color: #5E5E5E;
+    font-weight: 400;
+  }
+  
+  .input {
+    display: flex;
+    padding: 10px;
+    padding-left: 10px;
+      width: 80%;
+    height: 15px;
+    background-color: transparent;
+    border: 1px solid #3E3E3E;
+    border-radius: 11px;
+    font-size: 10px;
+  }
+  
+  .input:focus {
+    border-color: #4caf50;
+    outline: none;
+   
+   
+  }
+  
+  .errorBorder {
+    border-color: #EE1D52 !important;
+  }
+  
+  .error {
+    font-size: 10px;
+    color: #EE1D52;
+    margin-top: 3px;
+  }
+
+  .cSave {
+    width: 90%;
+    display: flex;
+
+    justify-content: flex-end;
+  }
+  
+  
+  .saveButton {
+    
+    background-color: #28A263;
+    color: white;
+    width: 100px;
+    height: 30px;
+    padding: 0.60rem;
+    position: static;
+ 
+    border: none;
+    border-radius: 10px;
+    
+    font-size: 12px
+    
+  }
+  
+  .saveButton:hover {
+    opacity: 0.8;
+  }
+}

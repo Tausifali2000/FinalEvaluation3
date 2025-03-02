@@ -1,0 +1,68 @@
+.header {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+ 
+}
+
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+ 
+  position: relative;
+
+  }
+
+.brand img {
+  width: 25px;
+  height: 32px;
+}
+
+.brand h1 {
+  font-family: "Plus Jakarta Sans", serif;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.brand .trademark {
+  position: absolute;
+  top: 8px;
+  right: 0px;
+  font-size: 5px;
+}
+
+
+
+.user img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.logout {
+  display: flex;
+  gap: 5px;
+  background-color: #F3F3F1;
+  border-radius: 22px;
+ 
+  width: 80px;
+  height: 28px;
+  align-items: center;
+  justify-content: center;
+ 
+}
+.logout p {
+  font-size: 10px;
+  color: #676767;
+  font-family: "Poppins", serif;
+}
+
+.logout img {
+  width: 12px;
+  height: 12px;
+}
+

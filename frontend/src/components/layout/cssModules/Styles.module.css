@@ -1,0 +1,314 @@
+.stackFill1, .stackFill2, .stackFill3, .stackSpecial4, .stackSpecial6{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 10px;
+  width: 291px;
+  height: 64px;
+  min-height: 64px;
+  border-radius: 0;
+  background-color: #C9C9C9;
+  color: black;
+  gap: 10px; 
+  font-size: 16px;
+  transition: all 0.5s ease-in-out;
+}
+
+.stackFill2 {
+  border-radius: 15px;
+}
+
+.stackFill3, .stackSpecial4{
+  border-radius: 50px;
+}
+
+.stackSpecial6 {
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+
+
+.stackOutline1, .stackOutline2, .stackOutline3{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 10px;
+  width: 291px;
+  height: 64px;
+  min-height: 64px;
+  border-radius: 0;
+  border: 1px solid black;
+  background-color: transparent;
+  color: black;
+  gap: 10px; 
+  font-size: 16px;
+  transition: all 0.5s ease-in-out;
+}
+
+
+.stackOutline2 {
+  border-radius: 15px;
+}
+
+.stackOutline3 {
+  border-radius: 50px;
+}
+
+
+.stackShopFill1, .stackShopFill2, .stackShopFill3, .stackShopOutline1, .stackShopOutline2 , .stackShopOutline3     {
+  width: 277px;
+  height: 160px;
+  min-height: 160px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-color: #D9D9D9;
+  border-radius: 0px;
+  gap: 5px;
+  font-size: 14px;
+  
+}
+
+.stackShopFill2 {
+  border-radius: 10px;
+}
+
+.stackShopFill3 {
+  border-radius: 24px;
+}
+
+.stackShopOutline1 {
+  background-color: none;
+  border: 2px black solid;
+  border-radius: 0;
+}
+
+.stackShopOutline2 {
+  background-color: none;
+  border: 2px black solid;
+  border-radius: 15px;
+}
+
+.stackShopOutline3 {
+  background-color: none;
+  border: 2px black solid;
+  border-radius: 50px;
+}
+
+
+.stackShopImg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 264px;
+  height: 89px;
+  color: #5b5656;
+  background-color: white;
+  border-radius: 9px;
+  
+}
+
+.stackCart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 215px;
+  height: 30px;
+  border-radius: 8px;
+  background-color: #28A263;
+  color: white;
+  gap: 10px;
+  font-size: 11px;
+
+}
+
+
+
+
+.stackCart:hover {
+  opacity: 0.8;
+}
+
+
+
+
+.gridFill1, .gridFill2 , .gridFill3, .gridOutline1, .gridOutline2,.gridOutline3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 134px;
+  height: 134px;
+  border-radius: 0;
+  background-color: #C9C9C9;
+  color: black;
+  font-size: 16px;
+  gap: 15px;
+}
+
+.gridFill2 {
+  border-radius: 8px;
+}
+
+.gridFill3 {
+  border-radius: 24px;
+}
+
+.gridOutline1 {
+  background-color: transparent;
+  border-radius: 0;
+  border: 2px solid black;
+}
+
+.gridOutline2 {
+  background-color: transparent;
+  border-radius: 8px;
+  border: 2px solid black;
+}
+
+.gridOutline3 {
+  background-color: transparent;
+  border-radius: 24px;
+  border: 2px solid black;
+}
+
+.gridShopFill1, .gridShopFill2, .gridShopFill3, .gridShopOutline1, .gridShopOutline2, .gridShopOutline3 {
+  width: 160px;
+  height: 160px;
+  min-height: 160px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  background-color: #D9D9D9;
+  border-radius: 0;
+  gap: 5px;
+}
+
+.gridShopFill2 {
+  border-radius: 8px;
+}
+
+.gridShopFill3 {
+  border-radius: 18px;
+}
+
+.gridShopOutline1 {
+  background-color: transparent;
+  border-radius: 0;
+  border: 2px solid black;
+}
+
+.gridShopOutline2 {
+  background-color: transparent;
+  border-radius: 8px;
+  border: 2px solid black;
+}
+.gridShopOutline3 {
+  background-color: transparent;
+  border-radius: 18px;
+  border: 2px solid black;
+}
+
+
+
+.carouselFill1, .carouselFill2, .carouselFill3, .carouselOutline1, .carouselOutline2, .carouselOutline3  {
+  min-width: 200px;
+  height: 270px;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #C9C9C9;
+  border-radius: 0;
+
+}
+
+.carouselFill2 {
+  border-radius: 10px;
+}
+
+.carouselFill3 {
+  border-radius: 24px;
+}
+
+.carouselOutline1 {
+  background-color: transparent;
+  border: 2px black solid;
+  border-radius: 0;
+}
+
+
+.carouselOutline2 {
+  background-color: transparent;
+  border: 2px black solid;
+  border-radius: 10px;
+}
+
+
+.carouselOutline3 {
+  background-color: transparent;
+  border: 2px black solid;
+  border-radius: 24px;
+}
+
+
+
+.carouselShopFill1, .carouselShopFill2,.carouselShopFill3,.carouselShopOutline1,.carouselShopOutline2,.carouselShopOutline3 {
+  width: 250px;
+  min-width: 250px;
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  background-color: #D9D9D9;
+  border-radius: 0;
+  gap: 5px;
+  
+}
+
+
+.carouselShopFill2 {
+    border-radius: 8px;
+}
+
+
+.carouselShopFill3 {
+  border-radius: 18px;
+}
+
+
+.carouselShopOutline1 {
+  border-radius: 0;
+  background-color: transparent;
+  border: 2px black solid;
+}
+
+
+
+.carouselShopOutline2 {
+  border-radius: 8px;
+  background-color: transparent;
+  border: 2px black solid;
+}
+
+
+
+.carouselShopOutline3 {
+  border-radius: 18px;
+  background-color: transparent;
+  border: 2px black solid;
+}
+
+
+
+
+
+
+

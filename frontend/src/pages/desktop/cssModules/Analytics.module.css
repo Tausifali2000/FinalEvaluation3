@@ -1,0 +1,264 @@
+.body {
+  padding: 1% 3%;
+  font-family: "Poppins", serif;
+}
+
+.analytics {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.head h1 {
+  font-size: 17px;
+  font-weight: 600;
+}
+
+
+.overview {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  padding: 20px;
+}
+
+.clicks, .clicks2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 10px;
+  width: 320px;
+  height: 100px;
+  border-radius: 19px;
+  padding: 29px;
+  background-color: #22D679;
+  color: white;
+}
+
+.clicks p, .clicks2 p {
+  font-size: 17px;
+  font-weight: 400;
+}
+
+.clicks h1  {
+  font-size: 29px;
+  font-weight: 600;
+}
+
+.clicks2 {
+  background-color: #DCFFEB;
+  color: black;
+}
+
+.clicks2 h2 {
+  color: #1C1C1C;
+  font-size: 29px;
+  font-weight: 600;
+}
+
+.totalcount {
+  width: 100%;
+  height: 400px;
+  background-color: white;
+  border-radius: 19px;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+}
+
+
+.sec0 {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.barchart {
+  width: 518px;
+  height: 328px;
+  border-radius: 19px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 20px;
+  gap: 20px;
+
+}
+
+ .piechart {
+  width: 518px;
+  height: 328px;
+  border-radius: 19px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 30px;
+  padding-top: 40px;
+  gap: 20px;
+
+}
+
+
+.barchart h1, .piechart h1 {
+  font-size: 17px;
+  margin-left: 20px;
+
+
+}
+
+.barchart2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 734px;
+  height: 524px;
+  border-radius: 44px;
+  background-color: white;
+}
+
+
+
+@media screen and (max-width: 650px) {    
+  .head {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .head h1 {
+    font-size: 17px;
+    font-weight: 600;
+  }
+  
+  
+  .overview {
+    width: 100%;
+    display: flex;
+    margin-bottom: 30px;
+    gap: 20px;
+ 
+    overflow-x: auto; /* Enables horizontal scrolling */
+    white-space: nowrap; /* Prevents content from wrapping */
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: #888 #f3f3f3; /* Custom scrollbar styling */
+}
+
+  .clicks, .clicks2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+ 
+    gap: 10px;
+    width: 267px;
+    height: 75px;
+    border-radius: 19px;
+    padding: 15px;
+    background-color: #22D679;
+    color: white;
+  }
+  
+  .clicks p, .clicks2 p {
+    font-size: 13px;
+    font-weight: 400;
+  }
+  
+  .clicks h1  {
+    font-size: 14px;
+    font-weight: 600;
+  }
+  
+  .clicks2 {
+    background-color: #DCFFEB;
+    color: black;
+  }
+  
+  .clicks2 h2 {
+    color: #1C1C1C;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .totalcount {
+    width: 100%;
+    background-color: white;
+    border-radius: 19px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  
+  .sec0 {
+    display: flex;
+    flex-direction: column;
+  
+    margin-bottom: 30px;
+  }
+  
+  .barchart {
+    width: 100%;
+    height: 328px;
+    border-radius: 19px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 10px;
+    gap: 20px;
+  
+  }
+  
+   .piechart {
+    width: 100%;
+    height: 328px;
+    border-radius: 19px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    padding-top: 40px;
+ 
+  }
+  
+  
+  .barchart h1, .piechart h1 {
+    font-size: 17px;
+    margin-left: 20px;
+  
+  
+  }
+  
+  .barchart2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    height: 524px;
+    border-radius: 44px;
+    background-color: white;
+  }
+}
+
