@@ -18,6 +18,7 @@ import { useScreenStore } from "./store/screen.store.js";
 import MobileLayout from "./layout/MobileLayout.jsx";
 import MobileTree from "./pages/desktop/publicPages/MobileTree.jsx";
 import MainSkeleton from "./skeletons/MainSkeleton.jsx";
+import MobileLanding from "./pages/desktop/publicPages/MobileLanding.jsx";
 
 export const CustomToast = {
   success: (message) => {
@@ -76,7 +77,7 @@ function App() {
   return (
 <>
   <Routes>
-    <Route path="/welcome" element={!user ? <LandingPage /> : <Navigate to="/" />}></Route>
+    <Route path="/welcome" element={!user ? (screenSize <= 650 ? <MobileLanding/> : <LandingPage />): <Navigate to="/" />}></Route>
     <Route path="/signup" element={!user ? <Signup /> : <Navigate to ="/" />}></Route>
     <Route path="/signin" element={!user ? <Signin /> : <Navigate to ="/" />}></Route>
     <Route path="/:userId" element={screenSize <= 650 ? <MobileTree/> : <LinkTree />}></Route>

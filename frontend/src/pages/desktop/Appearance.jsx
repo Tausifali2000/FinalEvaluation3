@@ -1,12 +1,12 @@
 
-import { useForm } from "react-hook-form";
+
 import styles from "./cssModules/Appearance.module.css";
 
 import Preview from "../../components/Preview";
-import { useAuthStore } from "../../store/auth.store";
+
 import { useEffect, useState } from "react";
 import { useProfileStore } from "../../store/profile.store";
-import { useTypeStore } from "../../store/type.store";
+
 import FontSelector from "../../components/FontSelector";
 import { useAppearanceStore } from "../../store/appearance.store";
 import Spinner from "../../components/Spinner";
@@ -65,6 +65,11 @@ const Appearance = () => {
 
       <div className={`${styles.preview} ${isPreviewVisible ? styles.show : styles.hide}`}>
         <Preview />
+        <div className={isPreviewVisible ? styles.show : styles.hide}>
+        <button className={styles.close} onClick={handleCloseClick}>
+          X
+        </button>
+      </div>
 
       </div>
 
@@ -331,19 +336,17 @@ const Appearance = () => {
           </button>
         </div>
 
-      </div>
-      <div className={isPreviewVisible ? styles.hide : styles.show}>
+        <div className={isPreviewVisible ? styles.hide : styles.show}>
         <button className={styles.previewButton} onClick={handlePreviewClick} >
           <img src="/links/eye.svg" />
           Preview
         </button>
       </div>
 
-      <div className={isPreviewVisible ? styles.show : styles.hide}>
-        <button className={styles.close} onClick={handleCloseClick}>
-          X
-        </button>
+     
+
       </div>
+     
 
 
 

@@ -27,6 +27,12 @@ useEffect(() => {
   }
 }, [check]); 
 
+const specialButtons = ["Special1", "Special2", "Special3", "Special4", "Special5", "Special6"];
+if (specialButtons.includes(button.type)) {
+  CustomToast.error("Special buttons only work in Stack.");
+  
+}
+
 
 const handleProfileLinkClick = async (link) => {
   if (!check) {

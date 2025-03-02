@@ -1,5 +1,6 @@
 
 import { CustomToast } from "../App";
+import LoadingSpinner from "../skeletons/LoadingSpinner";
 import { useAppearanceStore } from "../store/appearance.store";
 import { useAuthStore } from "../store/auth.store";
 
@@ -12,7 +13,7 @@ import MuiToggleButton from "./ToggleButton"
 
 const PreviewLinks = ({ links, shopLinks, image}) => {
 
-  const{ font, layout, theme, background} = useAppearanceStore();
+  const{ font, layout, theme, background, isLoading} = useAppearanceStore();
   const {user} = useAuthStore()
    
   const username = user?.username
@@ -55,10 +56,17 @@ const PreviewLinks = ({ links, shopLinks, image}) => {
            <MuiToggleButton />
                      
           </div>
-
-          {layout === "stack" && <Stack links={links} shopLinks={shopLinks}/>}
-        {layout === "grid" && <Grid links={links} shopLinks={shopLinks} />}
-        {layout === "carousel" && <Carousel links={links} shopLinks={shopLinks} />}
+          {isLoading ? (
+            <div className={styles.spinner}>  
+              <LoadingSpinner />
+            </div>
+          ) : (
+            <>
+              {layout === "stack" && <Stack links={links} shopLinks={shopLinks} />}
+              {layout === "grid" && <Grid links={links} shopLinks={shopLinks}/>}
+              {layout === "carousel" && <Carousel links={links} shopLinks={shopLinks} />}
+            </>
+          )}
 
       <div className={styles.bottom}>
       <button className={styles.connected} onClick={handleClick} >Get Connected</button>

@@ -54,8 +54,72 @@
   border-radius: 50px;
 }
 
+.stackSpecial1 {
+  margin-top: 5px;
+}
 
-.stackShopFill1, .stackShopFill2, .stackShopFill3, .stackShopOutline1, .stackShopOutline2 , .stackShopOutline3     {
+.stackSpecial1, .stackSpecial2 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  padding: 0 10px;
+  width: 291px;
+  height: 64px;
+  background-color: black; 
+  margin-bottom: 10px;
+  margin-top: 20px;
+
+  border: none;
+  
+ }
+
+ .stackSpecial1::before,
+.stackSpecial1::after {
+  content: "";
+  position: absolute;
+  
+  left: 0;
+  width: 100%;
+  height: 10px; /* Adjust height based on torn.svg */
+  background: url('/appearance/tornpage.svg') repeat-x;
+  background-size: cover;
+}
+
+.stackSpecial1::before {
+  top: -10px; /* Moves it slightly above the button */
+}
+
+/* Bottom torn effect (Rotated) */
+.stackSpecial1::after {
+  bottom: -10px; /* Moves it slightly below the button */
+  transform: rotate(180deg);
+}
+
+.stackSpecial2::before,
+.stackSpecial2::after {
+  content: "";
+  position: absolute;
+  
+  left: 0;
+  width: 100%;
+  height: 10px; /* Adjust height based on torn.svg */
+  background: url('/appearance/wave.svg') repeat-x;
+  background-size: cover;
+}
+
+.stackSpecial2::before {
+  top: -8px; /* Moves it slightly above the button */
+}
+
+/* Bottom torn effect (Rotated) */
+.stackSpecial2::after {
+  bottom: -8px; /* Moves it slightly below the button */
+  transform: rotate(180deg);
+}
+
+
+.stackShopFill1, .stackShopFill2, .stackShopFill3, .stackShopOutline1, .stackShopOutline2 , .stackShopOutline3, .stackShopSpecial1,.stackShopSpecial2,.stackShopSpecial3, .stackShopSpecial4,  .stackShopSpecial5,.stackShopSpecial6    {
   width: 277px;
   height: 160px;
   min-height: 160px;
@@ -75,9 +139,15 @@
   border-radius: 10px;
 }
 
-.stackShopFill3 {
+.stackShopFill3,  .stackShopSpecial4  {
   border-radius: 24px;
 }
+
+.stackShopSpecial6 {
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+
 
 .stackShopOutline1 {
   background-color: none;
@@ -134,7 +204,7 @@
 
 
 
-.gridFill1, .gridFill2 , .gridFill3, .gridOutline1, .gridOutline2,.gridOutline3 {
+.gridFill1, .gridFill2 , .gridFill3, .gridOutline1, .gridOutline2,.gridOutline3, .gridSpecial4, .gridSpecial6{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -152,7 +222,7 @@
   border-radius: 8px;
 }
 
-.gridFill3 {
+.gridFill3, .gridSpecial4 {
   border-radius: 24px;
 }
 

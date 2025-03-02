@@ -28,6 +28,12 @@
   position: relative;
 }
 
+
+
+.spinner {
+  margin-top: 40%;
+}
+
 .share {
   width: 41px;
   height: 41px;
@@ -50,6 +56,10 @@
   background-color: white;
 
 
+}
+
+.spinner {
+  margin-top: 40%;
 }
 
 .username {

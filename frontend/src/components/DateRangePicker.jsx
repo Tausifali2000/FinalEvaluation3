@@ -3,8 +3,8 @@ import styles from "./cssModules/DateRangePicker.module.css"; // Import CSS Modu
 
 const DateRangePicker = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [startDate, setStartDate] = useState("Feb 9th");
-  const [endDate, setEndDate] = useState("Feb 15th");
+  const [startDate, setStartDate] = useState("Mar 2th");
+  const [endDate, setEndDate] = useState("Mar 20th");
   const [selectedStartDate, setSelectedStartDate] = useState({ date: "", fullDate: "" });
   const [selectedEndDate, setSelectedEndDate] = useState({ date: "", fullDate: "" });
 

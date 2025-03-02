@@ -17,11 +17,13 @@
 
 .customise {
   width: 640px;
-
+  height: 800px;
+  overflow-y: auto;
+  scrollbar-width: none;
   justify-content: flex-start;
   display: flex;
   flex-direction: column;
-  height: auto;
+  
   padding-bottom: 80px;
 
 }
@@ -205,7 +207,7 @@
 }
 
 
- .special3, .special4, .special5, .special6  {
+.special4, .special5, .special6  {
   width: 181px;
   height: 36px;
   background-color: black; 
@@ -273,23 +275,47 @@
   transform: rotate(180deg);
 }
 
-
-
- .special3 {
-  background-color: white;
-  border: 2px solid black;
+.special3{
+  width: 181px;
+  height: 30px;
   position: relative;
+  display: inline-block;
+  padding: 10px 40px; /* Adjust padding as needed */
+  font-size: 16px;
+  background-color: transparent;
+  border: 2px solid black; /* Main outer border */
+  text-align: center;
+  cursor: pointer;
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  overflow: hidden;
 }
 
+/* Add an inner outline */
+.special3::before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  right: 6px;
+  bottom: 6px;
+  border: 2px solid black; /* Inner border */
+}
+
+/* Side extending borders */
 .special3::after {
   content: "";
   position: absolute;
-  top: -3px;
-  left: -3px;
-  right: -3px;
-  bottom: -3px;
-  border: 2px solid black;
+  top: 0;
+  bottom: 0;
+  left: -10px;
+  right: -10px;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
 }
+
+
 
 .special4 {
   border-radius: 50px
