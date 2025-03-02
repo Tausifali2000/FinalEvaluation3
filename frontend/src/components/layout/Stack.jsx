@@ -4,7 +4,7 @@ import { useAppearanceStore } from "../../store/appearance.store";
 import { UAParser } from "ua-parser-js";
 import { useTypeStore } from "../../store/type.store";
 import styles from "./cssModules/Layout.module.css"
-import design from "./cssModules/styles.module.css"
+import design from "./cssModules/Styles.module.css"
 import { useEffect } from "react";
 import { useTreeStore } from "../../store/linkTree.store";
 
