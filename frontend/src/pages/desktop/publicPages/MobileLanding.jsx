@@ -74,7 +74,7 @@ const {screenSize} = useScreenStore()
               </div>
               <div>
                 <div>
-                <img src="/landing/dollarIcon.svg" />
+               
                   <h3>$4,560</h3>
                   Revenue
                 </div>
