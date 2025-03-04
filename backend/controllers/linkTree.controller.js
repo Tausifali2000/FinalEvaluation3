@@ -2,7 +2,7 @@ import { Analytics } from "../models/analytics.model.js";
 import { Appearance } from "../models/appearance.model.js";
 import { Link } from "../models/link.model.js";
 import { User } from "../models/user.model.js";
-import dayjs from "dayjs"; // Import Day.js
+
 import { incrementDateClick } from "../utils/incrementDateClick.js";
 
 
@@ -48,17 +48,15 @@ export async function addCta(req, res) {
       return res.status(400).json({ error: "User ID is required" });
     }
 
-    // Increment CTA count by 1
-    const analytics = await Analytics.findOneAndUpdate(
-      { userId },
-      { $inc: { cta: 1 } },
-      { new: true, upsert: true } 
-    );
-    await incrementDateClick(userId); 
+    // Call the new function with type "cta"
+    await incrementDateClick(userId, "cta");
+
+    // Fetch updated analytics
+    const analytics = await Analytics.findOne({ userId });
 
     res.json({
       message: "CTA count updated successfully",
-      cta: analytics.cta,
+      cta: analytics?.cta || [],
     });
 
   } catch (error) {
@@ -67,12 +65,13 @@ export async function addCta(req, res) {
   }
 }
 
+
 export async function profileClick(req, res) {
   try {
     const { linkId, icon, os } = req.body; // Extract link ID, icon, and OS
     const { userId } = req.params; // Extract user ID from params
 
-    const today = dayjs().format("MMM D, YYYY");
+  
 
     // Map icon to site analytics field
     const siteField = ["youtube", "facebook", "instagram", "twitter"].includes(icon)
@@ -89,20 +88,22 @@ export async function profileClick(req, res) {
     };
     const deviceField = osMap[os] || "devices.other";
 
+    // Update site & device tracking
     const updatedAnalytics = await Analytics.findOneAndUpdate(
       { userId }, // Find by userId
       {
         $inc: {
           [siteField]: 1,      // Increment site click count
           [deviceField]: 1,    // Increment device click count
-          profileClicks: 1     // Increment profile clicks count
         },
       },
       { upsert: true, new: true } // Create new doc if not exists, return updated
     );
 
-    await incrementDateClick(userId); 
+    // Call the new function to handle profile click tracking
+    await incrementDateClick(userId, "profile");
 
+    // Increment clicks for the specific profile link
     const updatedLink = await Link.findOneAndUpdate(
       { userId, "profileLinks.linkId": linkId }, // Find user and specific link
       { $inc: { "profileLinks.$.clicks": 1 } }, // Increment clicks
@@ -114,7 +115,7 @@ export async function profileClick(req, res) {
     }
 
     res.status(200).json({
-      message: "profile Link successfully",
+      message: "Profile link click recorded successfully",
       updatedAnalytics,
       updatedLink,
     });
@@ -125,13 +126,12 @@ export async function profileClick(req, res) {
 }
 
 
+
 export async function shopClick(req, res) {
   try {
-    const { shopId, os } = req.body; // Extract link ID, icon, and OS
+    const { shopId, os } = req.body; // Extract shop ID and OS
     const { userId } = req.params; // Extract user ID from params
-
-   
-
+    const type = "shop"; // Define type for tracking
 
     // Map OS to device analytics field
     const osMap = {
@@ -143,21 +143,19 @@ export async function shopClick(req, res) {
     };
     const deviceField = osMap[os] || "devices.other";
 
+    // Update analytics for device tracking
     const updatedAnalytics = await Analytics.findOneAndUpdate(
       { userId }, // Find by userId
-      {
-        $inc: {
-          [deviceField]: 1,    // Increment device click count
-          shopClicks: 1     // Increment profile clicks count
-        },
-      },
+      { $inc: { [deviceField]: 1 } }, // Increment device click count
       { upsert: true, new: true } // Create new doc if not exists, return updated
     );
 
-    await incrementDateClick(userId); 
+    // Update shop click count in analytics
+    await incrementDateClick(userId, type);
 
+    // Update shop link click count
     const updatedShop = await Link.findOneAndUpdate(
-      { userId, "shopLinks.shopId": shopId }, // Find user and specific link
+      { userId, "shopLinks.shopId": shopId }, // Find user and specific shop link
       { $inc: { "shopLinks.$.clicks": 1 } }, // Increment clicks
       { new: true } // Return the updated document
     );
@@ -167,7 +165,7 @@ export async function shopClick(req, res) {
     }
 
     res.status(200).json({
-      message: "Shop Link successfully",
+      message: "Shop link successfully updated",
       updatedAnalytics,
       updatedShop,
     });
@@ -182,13 +180,12 @@ export async function toggleClick(req, res) {
   try {
     const { type, os } = req.body;
     const { userId } = req.params;
-    console.log(type)
-   
 
     if (!userId || !type) {
       return res.status(400).json({ message: "User ID and type are required." });
     }
 
+    // Map OS to device analytics field
     const osMap = {
       iOS: "devices.ios",
       Windows: "devices.windows",
@@ -198,27 +195,29 @@ export async function toggleClick(req, res) {
     };
     const deviceField = osMap[os] || "devices.other";
 
-    await incrementDateClick(userId); 
+    // Ensure type is one of the expected values
+    const validTypes = ["profile", "shop", "cta"];
+    if (!validTypes.includes(type)) {
+      return res.status(400).json({ message: "Invalid type parameter." });
+    }
 
-    // Determine the correct field to increment based on type
-    const incrementField = type === "link" ? "profileClicks" : "shopClicks";
-
+    // Update analytics for device tracking
     const updatedAnalytics = await Analytics.findOneAndUpdate(
       { userId },
-      {
-        $inc: {
-          [deviceField]: 1,
-          [incrementField]: 1,
-        },
-      },
+      { $inc: { [deviceField]: 1 } }, // Increment device click count
       { upsert: true, new: true }
     );
 
-    res.status(200).json({ message: "Analytics updated successfully", analytics: updatedAnalytics });
+    // Update click counts based on type
+    await incrementDateClick(userId, type);
+
+    res.status(200).json({
+      message: "Analytics updated successfully",
+      analytics: updatedAnalytics,
+    });
 
   } catch (error) {
     console.error("Error updating analytics:", error);
     res.status(500).json({ message: "Internal server error." });
   }
 }
-

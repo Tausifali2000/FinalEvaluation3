@@ -13,7 +13,7 @@ const Header = () => {
     <div className={styles.header}>
         <div className={styles.greeting}>
           <h1><span className={styles.highlight}>Hi,</span> {firstName} {lastName}!</h1>
-          <p>Congratulations . You got a great response today .</p>
+          <p>Congratulations. You got a great response today.</p>
         </div>
     </div>
   )

@@ -2,9 +2,9 @@
   display: flex;
   font-family: "Poppins", serif;
  
-  padding: 2% 5%;
+  padding: 2% 4%;
   
-  gap: 15%;
+  gap: 10%;
 
 }
 
@@ -17,6 +17,7 @@
 
 .customise {
   width: 640px;
+  min-width: 640px;
   height: 800px;
   overflow-y: auto;
   scrollbar-width: none;
@@ -123,6 +124,7 @@
 .fill, .outline, .hardShadow, .softShadow, .special {
   display: flex;
   justify-content: space-between;
+  gap: 10px;
 }
 
 .special {
@@ -331,10 +333,10 @@
 .special5::before {
   content: "";
   position: absolute;
-  top: 5px;
-  left: 5px;
-  right: -5px;
-  bottom: -5px;
+  top: 2px;
+  left: -7px;
+  right: -7px;
+  bottom: 2px;
   border: 2px solid black;
 }
 

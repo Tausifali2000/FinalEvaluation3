@@ -1,40 +1,53 @@
-import dayjs from "dayjs";
 import { Analytics } from "../models/analytics.model.js";
 
-
-
-export async function incrementDateClick(userId) {
+export async function incrementDateClick(userId, type) {
   try {
-    // Get current date in Indian Standard Time (IST)
-    const now = new Date().toLocaleString("en-IN", { 
+    const now = new Date().toLocaleString("en-IN", {
       timeZone: "Asia/Kolkata",
       day: "numeric",
       month: "short",
       year: "numeric"
     });
 
-    // Convert to "2 Mar, 2025" format
     const [day, month, year] = now.split(" ");
     const today = `${day} ${month.replace(",", "")}, ${year}`;
 
-    // Find the analytics record for the user
     let analytics = await Analytics.findOne({ userId });
 
     if (!analytics) {
-      // If analytics record does not exist, create a new one
       analytics = new Analytics({
         userId,
-        dates: [{ date: today, clicks: 1 }], // Initialize today's date with 1 click
+        profileClicks: [],
+        shopClicks: [],
+        cta: [],
+        totalClicks: [{ date: today, clicks: 1 }]
       });
-    } else {
-      // Check if today's date already exists in the analytics record
-      const todayEntry = analytics.dates.find(entry => entry.date === today);
 
-      if (todayEntry) {
-        todayEntry.clicks += 1; // Increment click count for today
-      } else {
-        analytics.dates.push({ date: today, clicks: 1 }); // Add new date entry
+      if (type === "profile") {
+        analytics.profileClicks.push({ date: today, clicks: 1 });
+      } else if (type === "shop") {
+        analytics.shopClicks.push({ date: today, clicks: 1 });
+      } else if (type === "cta") {
+        analytics.cta.push({ date: today, clicks: 1 });
       }
+    } else {
+      // Helper function to update clicks
+      const updateClickArray = (clickArray) => {
+        const todayEntry = clickArray.find(entry => entry.date === today);
+        if (todayEntry) {
+          todayEntry.clicks += 1;
+        } else {
+          clickArray.push({ date: today, clicks: 1 });
+        }
+      };
+
+      // Update based on type
+      if (type === "profile") updateClickArray(analytics.profileClicks);
+      if (type === "shop") updateClickArray(analytics.shopClicks);
+      if (type === "cta") updateClickArray(analytics.cta);
+
+      // Always update totalClicks
+      updateClickArray(analytics.totalClicks);
     }
 
     await analytics.save(); // Save updated analytics record

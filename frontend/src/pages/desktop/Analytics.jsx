@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 import { useAnalyticsStore } from "../../store/analytics.store";
 import styles from "./cssModules/Analytics.module.css";
@@ -12,11 +12,20 @@ import CustomLineChart from "../../components/CustomLineChart";
 
 const Analytics = () => {
 
-  const {profileClicks, shopClicks, cta, devices, sites, fetchAnalytics} = useAnalyticsStore()
+  const { totalProfileClicks, totalShopClicks, totalCtaClicks, fetchAnalytics} = useAnalyticsStore()
+
+    const [startDate, setStartDate] = useState(null);
+  const [endDate, setEndDate] = useState(null);
+  // Function to handle date changes from DateRangePicker
+  const handleDateChange = (start, end) => {
+    setStartDate(start);
+    setEndDate(end);
+    fetchAnalytics(start, end); // Fetch analytics when new dates are selected
+  };
+  console.log(startDate, endDate)
 
   useEffect(() => {
-    
-    fetchAnalytics();
+    fetchAnalytics(startDate, endDate); // Initial fetch
   }, []);
 
 
@@ -29,7 +38,7 @@ const Analytics = () => {
           <h1>Overview</h1>
         </div>
         <div className={styles.date}>
-          <DateRangePicker />
+        <DateRangePicker startDate={startDate} endDate={endDate} onDateChange={handleDateChange} />
         </div>
       </div>
 
@@ -39,14 +48,14 @@ const Analytics = () => {
       <div className={styles.overview}>
         <div className={styles.clicks}>
           <p>Clicks on Links</p>
-          <h1>{profileClicks}</h1>
+          <h1>{totalProfileClicks}</h1>
         </div>
         <div className={styles.clicks2}>
           <p>Clicks on Shop</p>
-          <h2>{shopClicks}</h2>
+          <h2>{totalShopClicks}</h2>
         </div> <div className={styles.clicks2}>
           <p>CTA</p>
-          <h2>{cta}</h2>
+          <h2>{totalCtaClicks}</h2>
         </div>
       </div>
 

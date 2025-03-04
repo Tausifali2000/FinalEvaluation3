@@ -131,9 +131,9 @@
 }
 
 .error {
-  font-size: 12px;
-  color: #EE1D52;
-  margin-top: 3px;
+  font-size: 12px !important;
+  color: #EE1D52 !important;
+  margin-top: 3px !important;
 }
 
 .selected {

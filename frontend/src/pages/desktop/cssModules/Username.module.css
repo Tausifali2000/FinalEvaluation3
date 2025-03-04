@@ -2,19 +2,19 @@
   display: flex;
   font-family: "Poppins", serif;
   width: 100%;
-height: 100vh;
- }
+  height: 100vh;
+}
 
 
- .brand {
+.brand {
   display: flex;
   align-items: center;
   gap: 2px;
-  top:3%;
+  top: 3%;
   left: 3%;
   position: absolute;
 
-  }
+}
 
 .brand img {
   width: 25px;
@@ -50,35 +50,36 @@ height: 100vh;
 
 
 .cont {
-  
+
   align-items: flex-start;
   flex-direction: column;
- }
+}
 
 .image {
   flex: 1;
- 
+
   background-image: url("/auth/auth.svg");
-  
+
 }
 
 .image2 {
   flex: 1;
   height: 100vh;
- 
+
   background-image: url("/auth/auth.svg");
-  
+
 }
 
 .heading {
-  margin-bottom: 50px;;
+  margin-bottom: 50px;
+  ;
 }
 
 
 .heading h1 {
   font-size: 48px;
   font-weight: 800;
- 
+
 
 }
 
@@ -130,7 +131,7 @@ height: 100vh;
 .input:focus {
   border-color: #4caf50;
   outline: none;
- 
+
 }
 
 .errorBorder {
@@ -138,15 +139,14 @@ height: 100vh;
 }
 
 .error {
-  font-size: 12px;
-  color: #EE1D52;
-  margin-top: 3px;
+  font-size: 14px !important;
+  margin-bottom: 12px !important;
+  color: #EE1D52 !important;
+  margin-top: 3px !important;
 }
 
-
-
-
-.submit, .disableSubmit {
+.submit,
+.disableSubmit {
   margin-top: 30px;
   background-color: #28A263;
   color: #fff;
@@ -167,7 +167,7 @@ height: 100vh;
   justify-content: center;
   background-color: #c3c3c3;
   gap: 5px;
-  
+
 }
 
 
@@ -180,14 +180,6 @@ height: 100vh;
   text-align: center;
   max-width: 600px;
   margin: auto;
-}
-
-
-
-.error {
-  color: red;
-  font-size: 14px;
-  margin-bottom: 12px;
 }
 
 .gridContainer {
@@ -235,53 +227,56 @@ height: 100vh;
 }
 
 
-@media screen and (max-width: 650px) {    
+@media screen and (max-width: 650px) {
 
-  .image2, .image {
+  .image2,
+  .image {
     display: none;
   }
+
   .left {
 
     width: 100%;
-  flex: 1;
-  
+    flex: 1;
+
   }
 
-  
-.cont {
-  width: 100%;  
-  align-items: flex-start;
-  flex-direction: column;
-  padding-left: 5%;
- }
+
+  .cont {
+    width: 100%;
+    align-items: flex-start;
+    flex-direction: column;
+    padding-left: 5%;
+  }
 
 
   .heading {
-    margin-bottom: 30px;;
+    margin-bottom: 30px;
+    ;
   }
-  
-  
+
+
   .heading h1 {
     font-size: 20px;
     font-weight: 800;
-   
-  
+
+
   }
-  
+
   .heading p {
     font-size: 10px;
     color: #676B5F;
   }
-  
+
   .form {
     display: flex;
     flex-direction: column;
     gap: 15px;
     width: 100%;
   }
-  
-  
-  
+
+
+
   .title {
     display: flex;
     align-items: center;
@@ -289,11 +284,11 @@ height: 100vh;
     font-weight: 600;
     font-size: 10px;
   }
-  
-  
-  
-  
-  
+
+
+
+
+
   .cInput {
     display: flex;
     flex-direction: column;
@@ -301,12 +296,11 @@ height: 100vh;
     margin-bottom: 30px;
     width: 100%;
   }
-  
-  
-  
+
+
+
   .input {
     padding: 10px;
-   
     width: 70%;
     height: 12px;
     background-color: transparent;
@@ -314,76 +308,54 @@ height: 100vh;
     border-radius: 8px;
     font-size: 10px;
   }
-  
+
   .input:focus {
     border-color: #4caf50;
     outline: none;
-   
+
   }
-  
-  .errorBorder {
-    border-color: #EE1D52 !important;
-  }
-  
-  .error {
-    font-size: 10px;
-    color: #EE1D52;
-    margin-top: 3px;
-  }
-  
-  
-  
-  
-  .submit, .disableSubmit {
+
+  .submit,
+  .disableSubmit {
     margin-top: 30px;
     background-color: #28A263;
     color: #fff;
-  
+
     border: none;
     width: 80%;
     border-radius: 64px;
     font-size: 12px;
     cursor: pointer;
   }
-  
+
   .submit:hover {
     background-color: #2EBE76;
   }
-  
+
   .disableSubmit {
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #c3c3c3;
     gap: 5px;
-    
-  }
-  
 
-  
+  }
+
   .container {
     text-align: center;
 
     margin: auto;
   }
-  
-  
-  
-  .error {
-    color: red;
-    font-size: 14px;
-    margin-bottom: 12px;
-  }
-  
+
   .gridContainer {
     display: flex;
     width: 90%;
     flex-wrap: wrap;
     justify-content: flex-start;
     gap: 8px;
-  
+
   }
-  
+
   .defaultButton {
     border: 1px solid #E0E2D9;
     border-radius: 24px;
@@ -397,11 +369,11 @@ height: 100vh;
     cursor: pointer;
     transition: all 0.3s ease;
   }
-  
+
   .defaultButton:hover {
     background-color: #f0f0f0;
   }
-  
+
   .selectedButton {
     background-color: #28A263;
     color: white;
@@ -414,7 +386,7 @@ height: 100vh;
     border: none;
     cursor: pointer;
   }
-  
+
   .icon {
     width: 16px;
     height: 16px;
@@ -424,37 +396,29 @@ height: 100vh;
     display: flex;
     align-items: center;
     gap: 2px;
-    top:3%;
+    top: 3%;
     left: 3%;
     position: absolute;
-  
-    }
-  
+
+  }
+
   .brand img {
     width: 20px;
     height: 28px;
   }
-  
+
   .brand h1 {
     font-family: "Plus Jakarta Sans", serif;
     font-size: 15px;
     font-weight: bold;
   }
-  
+
   .brand span {
     font-size: 10px;
     border: 1px solid black;
-  
-  
+
+
   }
-  
+
 
 }
-
-
-
-
-
-
-
-

@@ -18,14 +18,29 @@ const analyticsSchema = mongoose.Schema({
   },
 
   // Click tracking
-  profileClicks: { type: Number, default: 0 },
-  shopClicks: { type: Number, default: 0 },
-  cta: { type: Number, default: 0 },
-
-  dates: [
+  profileClicks: [
     {
       date: {type:String},
-      clicks: {type: Number}
+      clicks: {type: Number, default:0}
+    }  
+  ],
+  shopClicks: [
+    {
+      date: {type:String},
+      clicks: {type: Number, default:0}
+    }  
+  ],
+  cta: [
+    {
+      date: {type:String},
+      clicks: {type: Number, default:0}
+    }  
+  ],
+
+  totalClicks: [
+    {
+      date: {type:String},
+      clicks: {type: Number, default:0}
     }  
   ],
 

@@ -156,7 +156,7 @@ const Links = () => {
 
   const handleRemoveImage = () => {
     setSelectedFile(null); // Clear the selected file
-    setPreviewImage("http://localhost:5000/uploads/pfp.svg"); // Reset preview to default image
+    setPreviewImage("http://localhost:5200/uploads/pfp.svg"); // Reset preview to default image
     setImageRemoved(true);
     CustomToast.success("Image removed successfully"); // Show a toast notification
 
@@ -169,7 +169,7 @@ const Links = () => {
         if (selectedFile) {
             await imageUpload(selectedFile); // Upload new image
         } else if (imageRemoved) {
-            data.image = "http://localhost:5000/uploads/pfp.svg"; // Explicitly tell backend to remove image
+            data.image = "http://localhost:5200/uploads/pfp.svg"; // Explicitly tell backend to remove image
         }
 
         await saveProfile(data, localLinks, localShops); // Save other profile data
@@ -218,7 +218,7 @@ const Links = () => {
       </button>
       <div className={`${styles.preview} ${isPreviewVisible ? styles.show : styles.hide}`}>
 
-        <PreviewLinks links={localLinks} shopLinks={localShops} image={previewImage} />
+        <PreviewLinks links={localLinks} shopLinks={localShops} image={previewImage} background={color} />
         <div className={isPreviewVisible ? styles.show : styles.hide}>
           <button className={styles.close} onClick={handleCloseClick}>
             X
@@ -411,10 +411,15 @@ const Links = () => {
                 </div>
                 <div className={styles.picker}>
 
-                  <input type="color"
+                  {/* <input type="color"
                     {...register("color")}
                     className={styles.colorPicker}
-                    onChange={(e) => setValue("color", e.target.value)} />
+                    onChange={(e) => setValue("color", e.target.value)} /> */}
+                    <div
+                    className={styles.colorPreview}
+                    style={{ backgroundColor: color }}
+                    onClick={() => document.getElementById("colorInput").click()}
+                  ></div>
 
                   <input type="text"
                     value={color}

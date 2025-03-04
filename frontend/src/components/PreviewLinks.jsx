@@ -11,12 +11,13 @@ import Stack from "./layout/Stack";
 import MuiToggleButton from "./ToggleButton"
 
 
-const PreviewLinks = ({ links, shopLinks, image}) => {
+const PreviewLinks = ({ links, shopLinks, image, background}) => {
 
-  const{ font, layout, theme, background, isLoading} = useAppearanceStore();
+  const{ font, layout, theme,  isLoading} = useAppearanceStore();
   const {user} = useAuthStore()
    
   const username = user?.username
+  const bg = background
 
 
   const handleShare = async () => {
@@ -43,7 +44,7 @@ const PreviewLinks = ({ links, shopLinks, image}) => {
   return (
     <div className={styles.cPreview}>
        <div className={styles.preview} style={{ backgroundColor: theme, fontFamily: font.name}}>
-        <div className={styles.banner} style={{ backgroundColor: background }}>
+        <div className={styles.banner} style={{ backgroundColor: bg }}>
           <button className={styles.share} onClick={handleShare}>
             <img src="/links/share.svg"className={styles.shareimg} />
           </button>

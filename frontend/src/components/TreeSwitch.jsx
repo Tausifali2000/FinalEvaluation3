@@ -45,7 +45,7 @@ const TreeSwitch = ({user}) => {
           
         try {
             
-           type = "link"
+           type = "profile"
             await toggleClick(userId, type ,osName );
          
           } catch (error) {
